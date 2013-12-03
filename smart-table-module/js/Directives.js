@@ -59,9 +59,9 @@
                     }, true);
 
                     //if item are added or removed into the data model from outside the grid
-                    scope.$watchCollection('dataCollection', function () {
+                    scope.$watch('dataCollection', function () {
                         ctrl.sortBy(); // it will trigger the refresh... some hack ?
-                    });
+                    }, true);
                 }
             };
         }])
